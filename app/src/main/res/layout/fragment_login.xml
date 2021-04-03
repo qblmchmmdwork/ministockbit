@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginFragment">
+
+    <com.stockbit.ministockbit.view.StockbitToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Masuk" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="16dp">
+
+            <com.stockbit.ministockbit.view.LoginServiceButton
+                android:id="@+id/googleLoginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/masuk_dengan_google"
+                app:icon="@drawable/ic_google_logo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.stockbit.ministockbit.view.LoginServiceButton
+                android:id="@+id/facebookLoginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/masuk_dengan_facebook"
+                app:icon="@drawable/ic_facebook_logo"
+                app:layout_constraintTop_toBottomOf="@id/googleLoginButton" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="@color/light_grey"
+                app:layout_constraintBottom_toBottomOf="@id/textAtau"
+                app:layout_constraintTop_toTopOf="@id/textAtau" />
+
+            <TextView
+                android:id="@+id/textAtau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="?android:attr/windowBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/atau"
+                android:textColor="@color/light_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facebookLoginButton" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameOrEmailTextField"
+                style="@style/CustomOutlineBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/textAtau">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/username_or_email" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextField"
+                style="@style/CustomOutlineBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/light_grey"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/usernameOrEmailTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lupaPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/lupa_password"
+                android:textColor="?colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordTextField" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:paddingVertical="16dp"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/lupaPassword" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/masukDenganFingerprintButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="?android:colorBackground"
+                android:paddingVertical="14dp"
+                android:text="@string/masuk_dengan_fingerprint"
+                android:textAllCaps="false"
+                android:textColor="?colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/loginButton"
+                app:strokeColor="?colorPrimary"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/belumPunyaAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/belum_punya_akun"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/daftarSekarang"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/masukDenganFingerprintButton" />
+
+            <TextView
+                android:id="@+id/daftarSekarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/daftar_sekarang"
+                android:textColor="?colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/belumPunyaAkun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/belumPunyaAkun"
+                app:layout_constraintTop_toTopOf="@id/belumPunyaAkun" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ministockbit</string>
+    <string name="masuk_dengan_google">Masuk dengan Google</string>
+    <string name="masuk_dengan_facebook">Masuk dengan Facebook</string>
+    <string name="atau">Atau</string>
+    <string name="username_or_email">Username or Email</string>
+    <string name="password">Password</string>
+    <string name="lupa_password">Lupa Password</string>
+    <string name="masuk_dengan_fingerprint">Masuk dengan Fingerprint</string>
+    <string name="login">Login</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="daftar_sekarang">Daftar sekarang</string>
+    <string name="stockbit_logo">Stockbit logo</string>
+    <string name="close_drawer_description">Close drawer</string>
+    <string name="open_drawer_description">Open drawer</string>
+    <string name="all_watchlist">All Watchlist</string>
+    <string name="add_symbol">Add Symbol</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="stream">Stream</string>
+    <string name="search">Search</string>
+    <string name="chat">Chat</string>
+    <string name="portofolio">Portofolio</string>
+    <string name="reload">Reload</string>
+</resources>
